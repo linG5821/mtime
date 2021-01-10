@@ -23,6 +23,14 @@
         </developer>
     </developers>
 
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>Apache Maven Central</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
