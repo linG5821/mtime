@@ -28,7 +28,8 @@ public class Mtime {
     public static final String PRESET_PATTERN_10 = "yyyy年MM月dd日 HH时mm分ss秒";
     public static final String PRESET_PATTERN_11 = "yyyy-MM-dd HH:mm:ss EE";
     public static final String PRESET_PATTERN_12 = "yyyy-MM-dd HH:mm:ss.SSS";
-    public static final String PRESET_PATTERN_13 = "HH:mm:ss yyyy/MM/dd";;
+    public static final String PRESET_PATTERN_13 = "HH:mm:ss yyyy/MM/dd";
+    public static final String PRESET_PATTERN_14 = "yyMMddHHmmss";
 
 
     public static final DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER =
