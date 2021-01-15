@@ -417,6 +417,16 @@ public class Mtime {
     }
 
     /**
+     * 获取两个时间的间隔秒数
+     * @param startDateTime 开始日期时间
+     * @param endDateTime 结束日期时间
+     * @return
+     */
+    public static long getDiffSeconds(LocalDateTime startDateTime, LocalDateTime endDateTime) {
+        return ChronoUnit.SECONDS.between(startDateTime, endDateTime);
+    }
+
+    /**
      * {@link TemporalAccessor} 转换为 {@link Instant}对象 From: hutool
      *
      * @param temporalAccessor {@link TemporalAccessor}

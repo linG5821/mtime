@@ -63,6 +63,7 @@ public class MtimeTest {
         System.out.println(Mtime.format(LocalDateTime.now(), Mtime.PRESET_PATTERN_12));
         System.out.println(Mtime.format(LocalDateTime.now(), Mtime.PRESET_PATTERN_13));
         System.out.println(Mtime.format(LocalDateTime.now(), Mtime.PRESET_PATTERN_14));
+        System.out.println(Mtime.getDiffSeconds(LocalDateTime.now(), LocalDateTime.now().plusHours(10)));
     }
 
 }
