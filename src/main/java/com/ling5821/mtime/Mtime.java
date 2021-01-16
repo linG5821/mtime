@@ -427,6 +427,56 @@ public class Mtime {
     }
 
     /**
+     * 获取指定时间的上一个小时的时间
+     * @param localDateTime 日期时间
+     * @return 上一个小时的日期时间
+     */
+    public static LocalDateTime minusHour(LocalDateTime localDateTime) {
+        return localDateTime.minusHours(1).withMinute(0).withMinute(0).withSecond(0).withNano(0);
+    }
+
+    /**
+     * 获取当前时间的上一个小时的整点时间
+     * @return
+     */
+    public static LocalDateTime minusHour() {
+        return LocalDateTime.now().minusHours(1).withMinute(0).withMinute(0).withSecond(0).withNano(0);
+    }
+
+    /**
+     * 获取指定时间的下一个小时的整点时间
+     * @param localDateTime 指定时间
+     * @return 下一个小时的时间
+     */
+    public static LocalDateTime plusHour(LocalDateTime localDateTime) {
+        return localDateTime.plusHours(1).withMinute(0).withMinute(0).withSecond(0).withNano(0);
+    }
+
+    /**
+     * 获取当前时间的下一个小时的整点时间
+     * @return 下一个小时的时间
+     */
+    public static LocalDateTime plusHour() {
+        return LocalDateTime.now().plusHours(1).withMinute(0).withMinute(0).withSecond(0).withNano(0);
+    }
+
+    /**
+     * 获取指定时间的整点时间
+     * @return 整点时间
+     */
+    public static LocalDateTime nowHour(LocalDateTime localDateTime) {
+        return localDateTime.withMinute(0).withSecond(0).withNano(0);
+    }
+
+    /**
+     * 获取当前时间的整点时间
+     * @return 整点时间
+     */
+    public static LocalDateTime nowHour() {
+        return LocalDateTime.now().withMinute(0).withSecond(0).withNano(0);
+    }
+
+    /**
      * {@link TemporalAccessor} 转换为 {@link Instant}对象 From: hutool
      *
      * @param temporalAccessor {@link TemporalAccessor}

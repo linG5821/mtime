@@ -64,6 +64,12 @@ public class MtimeTest {
         System.out.println(Mtime.format(LocalDateTime.now(), Mtime.PRESET_PATTERN_13));
         System.out.println(Mtime.format(LocalDateTime.now(), Mtime.PRESET_PATTERN_14));
         System.out.println(Mtime.getDiffSeconds(LocalDateTime.now(), LocalDateTime.now().plusHours(10)));
+        System.out.println(Mtime.minusHour(Mtime.toLocalDateTime("2020-01-16 00:00:00")));
+        System.out.println(Mtime.minusHour());
+        System.out.println(Mtime.plusHour(Mtime.toLocalDateTime("2020-01-19 00:00:00")));
+        System.out.println(Mtime.plusHour());
+        System.out.println(Mtime.nowHour(Mtime.toLocalDateTime("2021-01-19 12:36:24")));
+        System.out.println(Mtime.nowHour());
     }
 
 }
