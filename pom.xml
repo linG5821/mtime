@@ -17,6 +17,14 @@
         <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
     </properties>
 
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo,manual</distribution>
+        </license>
+    </licenses>
+
     <developers>
         <developer>
             <name>linG</name>
@@ -24,7 +32,19 @@
         </developer>
     </developers>
 
+    <scm>
+        <connection>https://github.com/linG5821/mtime.git</connection>
+        <developerConnection>https://github.com/linG5821/mtime.git</developerConnection>
+        <url>https://github.com/linG5821/mtime</url>
+        <tag>${project.version}</tag>
+    </scm>
+
     <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <name>maven_nexus_repo</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
         <snapshotRepository>
             <id>ossrh</id>
             <name>Central Repository OSSRH</name>
@@ -67,6 +87,32 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--<plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>-->
         </plugins>
     </build>
 
