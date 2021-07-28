@@ -7,6 +7,9 @@
     <groupId>com.ling5821</groupId>
     <artifactId>mtime</artifactId>
     <version>0.0.1</version>
+    <name>mtime</name>
+    <url>https://github.com/linG5821/mtime.git</url>
+    <description>A collection of Java time tools</description>
 
     <properties>
         <java.version>1.8</java.version>
