@@ -23,11 +23,12 @@ jobs:
           # v2版本必须制定分发类型
           distribution: adopt
           java-version: 8
+          overwrite-settings: true
           server-id: ossrh
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
-          gpg-gpg-passphrase: MAVEN_GPG_PASSPHRASE
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE
       - name: Cache Maven packages
         uses: actions/cache@v2
         with:
